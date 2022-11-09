@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+
+:root {
+  --Cyan: hsl(179, 62%, 43%);
+  --Bright-Yellow: hsl(71, 73%, 54%);
+  --Light-Gray: hsl(204, 43%, 93%);
+  --Grayish-Blue: hsl(218, 22%, 67%);
+  --border-radius: 10px;
+}
+
+/* CSS RESET */
+* {
+  margin: 0 auto;
+  padding: 0 auto;
+  box-sizing: border-box;
+}
+
+/* BODY ALIGN */
+body {
+  background-color: hsl(178, 60%, 91%);
+  font-family: "Karla", sans-serif;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  max-height: 50%;
+  max-width: 50%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "grid-top grid-top"
+    "grid-left grid-right";
+}
+
+.grid-top {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  grid-area: grid-top;
+  max-height: 100%;
+  max-width: 100%;
+  width: 650px;
+  background-color: white;
+  padding: 35px;
+}
+
+.grid-top > h1 {
+  font-family: "Karla", sans-serif;
+  color: var(--Cyan);
+}
+
+.grid-top > h2 {
+  color: var(--Bright-Yellow);
+  padding-top: 30px;
+}
+
+.grid-top > p {
+  color: var(--Grayish-Blue);
+  padding-top: 15px;
+}
+
+.grid-left {
+  border-bottom-left-radius: 5px;
+  grid-area: grid-left;
+  max-height: 100%;
+  max-width: 100%;
+  height: 100%;
+  width: 325px;
+  background-color: rgba(43, 179, 177, 255);
+  padding-left: 35px;
+  color: white;
+}
+
+.grid-left > h1 {
+  padding-top: 30px;
+  font-size: 0.9375rem;
+}
+
+.grid-left > h2 {
+  padding-top: 25px;
+}
+
+.grid-left > h2 span {
+  color: var(--Light-Gray);
+  font-size: 0.625rem;
+  padding-left: 10px;
+  padding-top: 10px;
+  position: absolute;
+}
+
+.grid-left > p {
+  padding-top: 10px;
+}
+
+.grid-left > button {
+  font-family: "Karla", sans-serif;
+  font-size: 1rem;
+  position: relative;
+  top: 2.1875rem;
+  height: 20%;
+  width: 87%;
+  border-radius: 0.3125rem;
+  border: none;
+  background-color: var(--Bright-Yellow);
+  color: white;
+  box-shadow: #4c909b 0 2px 10px;
+}
+
+.grid-right {
+  border-bottom-right-radius: 5px;
+  grid-area: grid-right;
+  background-color: rgba(74, 190, 189, 255);
+  max-height: 100%;
+  max-width: 100%;
+  height: 100%;
+  width: 325px;
+  padding-left: 35px;
+  color: white;
+}
+
+.grid-right > h1 {
+  color: white;
+  padding-top: 30px;
+  padding-bottom: 23px;
+  font-size: 0.9375rem;
+}
+
+.stats-info {
+  padding-top: 5px;
+}
+
+@media screen and (max-width: 600px) {
+}
